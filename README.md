@@ -1,7 +1,10 @@
 # Schedule-Mute-Mac
 ## Process
 In terminal, type `crontab -e`
-Add line `0 23 * * * osascript <PATH>/Schedule-Mute-Mac/Schedule-Mute-Mac.applescript`
+Add a line 
+```
+0 23 * * * osascript <PATH>/Schedule-Mute-Mac/Schedule-Mute-Mac.applescript
+```
 This will mute the macOs every day at 23:00.
 ### How to use Crontab
 ```
