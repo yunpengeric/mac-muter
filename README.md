@@ -3,9 +3,9 @@
 In terminal, type `crontab -e`
 Add a line 
 ```
-0 23 * * * osascript <PATH>/Schedule-Mute-Mac/Schedule-Mute-Mac.applescript
+0 23 * * * osascript <PATH>/Schedule_Mute_Mac/Schedule-Mute-Mac.applescript
 ```
-This will mute the macOs every day at 23:00.
+This will mute the macOS every day at 23:00.
 ### How to use Crontab
 ```
 *     *     *   *    *        command to be executed
