@@ -11,5 +11,5 @@ read -p "What time do you want to mute(HH:MM format | 24 hour system)?" time
 H=${time%:*}
 M=${time#"$H"}
 M=${M#:}
-crontab -l | { cat; echo "$M $H * * * ~/.mac-muter/Schedule-Mute-Mac.applescript"; } | crontab -
+crontab -l | { cat; echo "$M $H * * * ~/.mac-muter/mac-muter.applescript"; } | crontab -
 echo "Done! Your computer will be muted at $time every day."
