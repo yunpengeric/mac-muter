@@ -1,22 +1,18 @@
 # Mac Muter
-## Process
-In terminal, type `crontab -e`
-Add a line 
+## Background
+One of the problems with Do Not Disturb (DND) on a Mac is that it does not mute sound. It will still make a sound even you are in DND.(For example,Outlook Web App)
+This will be very annoying if you are sleeping! So I created this script to mute sound regularly every day.
+
+## Installation
+Open Terminal on Mac, paste the following command: 
+```bash
+git clone https://github.com/yunpengeric/mac-muter.git && mv mac-muter ~/.mac-muter && ./.mac-muter/install.sh
 ```
-0 23 * * * osascript <PATH>/Schedule_Mute_Mac/mac-muter.applescript
+Enter the time you want to mute sound. Make sure the time is in HH:MM & 24-hour format.
+For example:
+```bash
+What time do you want to mute(HH:MM format | 24 hour system)?22:00
 ```
-This will mute the macOS every day at 23:00.
-### How to use Crontab
-```
-*     *     *   *    *        command to be executed
--     -     -   -    -
-|     |     |   |    |
-|     |     |   |    +----- day of week (0 - 6) (Sunday=0)
-|     |     |   +------- month (1 - 12)
-|     |     +--------- day of        month (1 - 31)
-|     +----------- hour (0 - 23)
-+------------- min (0 - 59)
-```
-### How to grant access to Crontab
-1. System Preferences > Security & Privacy > Privacy tab.
-2. Drag `/usr/sbin/cron` into Full Disk Access
+![screenshot](images/screenshot.png)
+Click `OK` to continue.
+You will see a message that says `Done! Your computer will be muted at 22:00 every day.`
