@@ -14,5 +14,6 @@ For example:
 What time do you want to mute(HH:MM format | 24 hour system)?22:00
 ```
 ![screenshot](images/screenshot.png)
+
 Click `OK` to continue.
 You will see a message that says `Done! Your computer will be muted at 22:00 every day.`
