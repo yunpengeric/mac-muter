@@ -15,5 +15,23 @@ What time do you want to mute(HH:MM format | 24 hour system)?22:00
 ```
 ![screenshot](images/screenshot.png)
 
-Click `OK` to continue.
 You will see a message that says `Done! Your computer will be muted at 22:00 every day.`
+
+## How it works now
+Recent macOS versions are much less reliable with old cron-based AppleScript automation, so the installer now:
+
+- compiles a small Swift command-line tool to mute the default output device
+- installs a per-user `launchd` agent in `~/Library/LaunchAgents`
+- removes the old cron entry if one exists
+
+This makes the scheduled mute job much more reliable on modern macOS.
+
+## Reinstall after updating
+If you already installed an older version, run:
+
+```bash
+cd ~/.mac-muter
+./install.sh
+```
+
+This refreshes the compiled binary and reloads the LaunchAgent.
