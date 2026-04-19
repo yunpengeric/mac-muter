@@ -1,1 +1,0 @@
-set volume output muted true
